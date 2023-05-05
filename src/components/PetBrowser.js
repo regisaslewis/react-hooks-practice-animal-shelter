@@ -6,7 +6,7 @@ function PetBrowser({ pets, onAdoptPet }) {
   const petList = pets.map(e => <Pet 
       onAdoptPet={onAdoptPet} 
       key={e.id}
-      item={e} 
+      pet={e} 
     />)
 
   return <div className="ui cards">{petList}</div>;

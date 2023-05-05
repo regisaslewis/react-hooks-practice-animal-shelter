@@ -1,14 +1,15 @@
 import React from "react";
 
-function Pet({ item, onAdoptPet }) {
+function Pet({ pet, onAdoptPet }) {
 
-  const {id, type, gender, age, weight, name, isAdopted} = item;
+  const {id, type, gender, age, weight, name, isAdopted} = pet;
 
   function handleAdopt() {
     if (isAdopted === false) {
       onAdoptPet(id);
     }
   }
+  console.log(id)
 
   return (
     <div className="card" data-testid="pet">
