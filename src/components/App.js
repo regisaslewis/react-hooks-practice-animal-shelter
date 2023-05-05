@@ -37,17 +37,9 @@ function App() {
   function changeType(type) {
     setFilters(type);
   }
-
-  function checkType(type) {
-    if (type === "all") {
-      return "pets";
-    } else {
-      return `pets?type=${type}`
-    }
-  }
   
   function findPetsClick() {
-    fetch(`http://localhost:3001/${checkType(filters)}`)
+    fetch(`http://localhost:3001/${(filters === "all") ? `pets` : `pets?type=${filters}`}`)
       .then(resp => resp.json())
       .then(data => setPets(data));
   }
