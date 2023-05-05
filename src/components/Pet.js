@@ -9,8 +9,7 @@ function Pet({ pet, onAdoptPet }) {
       onAdoptPet(id);
     }
   }
-  console.log(id)
-
+  
   return (
     <div className="card" data-testid="pet">
       <div className="content">
